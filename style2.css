@@ -1,0 +1,33 @@
+.delet-list {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.delet-list:hover {
+  cursor: pointer;
+}
+.delet-list::before {
+  top: 50%;
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background: #999;
+  transform: rotate(45deg);
+}
+.delet-list::after {
+  top: 50%;
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background: #888;
+  transform: rotate(-45deg);
+}
+/* .body {
+  background: linear-gradient(blue 50%, black 50%);
+} */
