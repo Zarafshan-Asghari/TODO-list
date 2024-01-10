@@ -16,7 +16,7 @@ function addDataToList() {
   let text = input.value.trim();
   if (text.length === 0) {
     // alert("input is empty !");
-    error.innerHTML = "empty";
+    error.innerHTML = "input is empty";
   } else {
     let newTask = input.value;
     // creating elements
@@ -91,7 +91,7 @@ listContainer.addEventListener("click", (event) => {
   if (event.target.matches("span")) {
     let delet = event.target.closest("div.parent-div");
     delet.remove();
-    // storeLists();
+    storeLists();
   }
 });
 // =================== to delet lists ===============================
@@ -103,4 +103,8 @@ function storeLists() {
   localStorage.setItem("lists", listContainer.innerHTML);
 }
 function showData() {
-  listContainer.innerHTML = localStora
+  listContainer.innerHTML = localStorage.getItem("lists");
+}
+showData();
+
+// console.log(listContainer.innerHTML);
